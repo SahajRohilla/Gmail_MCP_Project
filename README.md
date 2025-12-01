@@ -1,12 +1,14 @@
 # Gmail MCP Server (FastAPI + Claude Desktop)
 
-This project is a minimal Gmail **MCP server** built with FastAPI. It exposes a `/api/v1/send-email` HTTP endpoint and an MCP tool that can be called from MCP‑aware clients like Claude Desktop, so you can send real Gmail emails just by chatting with an AI assistant.
+This project provides a lightweight Gmail MCP server built using FastAPI. It exposes a REST endpoint (/api/v1/send-email) along with an MCP tool that can be accessed by MCP-compatible clients such as Claude Desktop. This allows you to send real Gmail emails simply by interacting with an AI assistant.
 
-The flow is:
+How it works:
 
-1. FastAPI app provides a `POST /api/v1/send-email` endpoint that sends email via the Gmail API.
-2. MCP integration wraps the app and exposes an MCP endpoint at `/mcp`.
-3. Claude Desktop connects to the MCP server and calls the email tool when you ask it to send an email.
+The FastAPI application offers a POST /api/v1/send-email endpoint that sends emails using the Gmail API.
+
+MCP integration wraps this FastAPI app and exposes an MCP endpoint at /mcp.
+
+Claude Desktop connects to the MCP server and triggers the email-sending tool whenever you request it to send an email.
 
 ---
 
