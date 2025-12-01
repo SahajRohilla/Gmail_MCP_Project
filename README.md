@@ -340,7 +340,3 @@ Check Gmail authentication status and get diagnostic information.
    - Check that all dependencies are installed
    - Restart Claude Desktop after configuration changes
    - Check Claude Desktop logs for errors
-
-## License
-
-MIT
